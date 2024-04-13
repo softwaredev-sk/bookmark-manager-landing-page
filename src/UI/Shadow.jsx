@@ -1,8 +1,17 @@
 function Shadow({ side }) {
-  const classes =
-    side === 'right'
-      ? 'w-[350px] h-[200px] right-0 bg-softblue absolute translate-x-16 -translate-y-48 -z-10 rounded-l-[100px] sm:w-[600px] sm:h-[300px] sm:-translate-y-80 md:w-[700px] md:h-[300px] md:-translate-y-72 lg:w-[550px] lg:h-[260px] lg:-translate-y-[17rem] lg:translate-x-36 xl:w-[600px] xl:h-[300px] xl:-translate-y-[20rem] 2xl:w-[750px] 2xl:h-[350px] 2xl:-translate-y-[22rem]'
-      : 'w-[450px] h-[200px] bg-softblue absolute -translate-x-36 -translate-y-40 overflow-x-hidden -z-10 rounded-br-[100px] md:rounded-tr-[200px] md:translate-y-20 md:rounded-br-[150px] md:h-[350px] md:w-[700px] md:-translate-x-80';
+  const left = `absolute -z-10 rounded-l-[100px] right-0 bg-softblue w-[18rem] h-[12rem] translate-x-8 -translate-y-48
+  sm:w-[30rem] sm:h-[18rem] sm:translate-x-16 sm:-translate-y-72
+  md:w-[36rem] md:h-[20rem] md:translate-x-16 md:-translate-y-80
+  lg:w-[30rem] lg:h-[16rem] lg:translate-x-24 lg:-translate-y-64
+  2xl:w-[36rem] 2xl:h-[20rem] 2xl:translate-x-22 2xl:-translate-y-80
+  `;
+  const right = `absolute -z-10 rounded-r-[100px] left-0 bg-softblue  w-[450px] h-[190px] -translate-x-36 -translate-y-36 
+  sm:w-[540px] sm:h-[300px] sm:-translate-x-8 sm:-translate-y-64
+  md:w-[540px] md:h-[320px] md:-translate-x-8 md:translate-y-28
+  lg:w-[600px] lg:h-[320px] lg:-translate-x-8 lg:translate-y-28
+  2xl:w-[760px] 2xl:h-[340px] 2xl:-translate-x-8 2xl:translate-y-20
+  `;
+  const classes = side === 'right' ? left : right;
   return <div className={classes}></div>;
 }
 
