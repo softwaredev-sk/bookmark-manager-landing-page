@@ -11,7 +11,7 @@ export default function Header({ onSelect, overlay }) {
       <img
         src={!overlay ? openIcon : closeIcon}
         alt="hamburger-icon"
-        className={`w-5 h-4 my-auto md:hidden`}
+        className="w-5 h-4 my-auto md:hidden"
         onClick={onSelect}
       />
       {/* </div> */}

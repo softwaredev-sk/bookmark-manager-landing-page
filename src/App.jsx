@@ -1,5 +1,5 @@
 // import { useState } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CTA from './components/CTA.jsx';
 import Download from './components/Download.jsx';
 import FAQ from './components/FAQ.jsx';
@@ -16,6 +16,13 @@ function App() {
   function handleHeaderOverlay() {
     setShowOverlay((prev) => !prev);
   }
+  useEffect(() => {
+    if (showOverlay) {
+      document.body.style.position = 'fixed';
+    } else {
+      document.body.style.position = null;
+    }
+  }, [showOverlay]);
   return (
     <>
       <Header onSelect={handleHeaderOverlay} overlay={showOverlay} />
