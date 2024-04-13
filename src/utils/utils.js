@@ -2,6 +2,10 @@ import tabOne from '../assets/images/illustration-features-tab-1.svg';
 import tabTwo from '../assets/images/illustration-features-tab-2.svg';
 import tabThree from '../assets/images/illustration-features-tab-3.svg';
 
+import logoChrome from '../assets/images/logo-chrome.svg';
+import logoFirefox from '../assets/images/logo-firefox.svg';
+import logoOpera from '../assets/images/logo-opera.svg';
+
 export const FAQ_LIST = [
   {
     id: 1,
@@ -29,7 +33,7 @@ export const FAQ_LIST = [
   },
 ];
 
-export const DATA_STORE = [
+export const FEATURES_DATA = [
   {
     id: 1,
     title: 'Bookmark in one click',
@@ -50,5 +54,23 @@ export const DATA_STORE = [
     desc: 'Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.',
     button: 'Easy Sharing',
     image: tabThree,
+  },
+];
+
+export const BROWSERS = [
+  {
+    name: 'chrome',
+    minver: '62',
+    logo: logoChrome,
+  },
+  {
+    name: 'firefox',
+    minver: '55',
+    logo: logoFirefox,
+  },
+  {
+    name: 'opera',
+    minver: '46',
+    logo: logoOpera,
   },
 ];

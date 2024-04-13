@@ -1,6 +1,7 @@
 import AccordionItem from './AccordionItem';
 import { FAQ_LIST } from '../utils/utils';
 import { createContext, useContext, useState } from 'react';
+import Button from '../UI/FormButton';
 
 const FaqContext = createContext();
 
@@ -47,9 +48,9 @@ export default function FAQ() {
         </div>
       </article>
 
-      <button className="rounded p-3 w-fit my-16 bg-softblue text-white font-medium">
+      <Button classes="rounded p-3 w-fit my-16 bg-softblue text-white font-medium">
         More Info
-      </button>
+      </Button>
     </section>
   );
 }

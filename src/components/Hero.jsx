@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import heroImg from '../assets/images/illustration-hero.svg';
-import Button from './Button';
+import Button from '../UI/CTAButton';
 import Shadow from '../UI/Shadow';
+import { BROWSERS } from '../utils/utils';
 
 function Hero() {
   const [active, setActive] = useState('chrome');
@@ -19,7 +20,6 @@ function Hero() {
             alt="hero-image"
             className="w-fit mx-auto"
           />
-          {/* <div className="w-[350px] h-[200px] right-0 bg-softblue absolute translate-x-16 righ -translate-y-48 -z-10 rounded-bl-[100px] sm:w-[600px] sm:h-[300px] sm:-translate-y-80 md:w-[700px] md:h-[300px] md:-translate-y-72 lg:w-[700px] lg:h-[350px] lg:-translate-y-[22rem] lg:translate-x-36"></div> */}
           <Shadow side={'right'} />
         </div>
         <div className="text-center lg:text-left lg:w-1/2 xl:max-w-3xl xl:mx-20">
@@ -34,18 +34,15 @@ function Hero() {
             </p>
           </div>
           <div className="w-4.5/5 m-auto lg:w-4/5 xl:w-full">
-            <Button
-              isActive={active === 'chrome'}
-              onClicking={() => handleClick('chrome')}
-            >
-              Get it on Chrome
-            </Button>
-            <Button
-              isActive={active === 'firefox'}
-              onClicking={() => handleClick('firefox')}
-            >
-              Get it on Firefox
-            </Button>
+            {BROWSERS.slice(0, 2).map((item) => (
+              <Button
+                key={item.name}
+                isActive={active === item.name}
+                onClicking={() => handleClick(item.name)}
+              >
+                Get it on {item.name[0].toUpperCase() + item.name.slice(1)}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
