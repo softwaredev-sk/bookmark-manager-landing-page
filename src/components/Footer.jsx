@@ -21,10 +21,10 @@ export default function Footer() {
         <div>
           <ul className="flex justify-center gap-12 scale-125 mt-12 lg:scale-100 lg:mt-6">
             <li>
-              <img src={logoFacebook} />
+              <img src={logoFacebook} alt="facebook-logo" />
             </li>
             <li>
-              <img src={logoTwitter} />
+              <img src={logoTwitter} alt="twitter-logo" />
             </li>
           </ul>
         </div>

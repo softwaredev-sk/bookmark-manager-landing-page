@@ -33,10 +33,10 @@ export default function HeaderOverlay({ onSelect }) {
       </article>
       <ul className="flex justify-center gap-12 scale-125 my-12">
         <li>
-          <img src={logoFacebook} />
+          <img src={logoFacebook} alt="facebook-logo" />
         </li>
         <li>
-          <img src={logoTwitter} />
+          <img src={logoTwitter} alt="twitter-logo" />
         </li>
       </ul>
     </motion.section>
