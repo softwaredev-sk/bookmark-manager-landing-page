@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import iconError from '../assets/images/icon-error.svg';
+// import iconError from '../assets/images/icon-error.svg';
 
 export default function CTA() {
   const email = useRef();
@@ -15,7 +15,6 @@ export default function CTA() {
       }, 3000);
     }
   }
-  const errorSVG = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23FA5959'/%3E%3Cg fill='%23FFF' transform='translate(9 5)'%3E%3Crect width='2' height='7' rx='1'/%3E%3Crect width='2' height='2' y='8' rx='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
   return (
     <section className="bg-softblue mt-4 p-5 text-center text-white">
       <article className="lg:w-2/5 lg:mx-auto">
