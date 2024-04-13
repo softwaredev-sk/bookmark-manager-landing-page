@@ -1,7 +1,33 @@
-import Accordion from './Accordion';
+import AccordionItem from './AccordionItem';
 import { FAQ_LIST } from '../utils/utils';
+import { createContext, useContext, useState } from 'react';
+
+const FaqContext = createContext();
+
+export function useFaqContext() {
+  const ctx = useContext(FaqContext);
+
+  if (!ctx) {
+    throw new Error('Required Component not wrapped with Provider Component');
+  }
+  return ctx;
+}
 
 export default function FAQ() {
+  const [openItemId, setOpenItemId] = useState();
+
+  function toggleItem(id) {
+    if (id != openItemId) {
+      setOpenItemId(id);
+    } else {
+      setOpenItemId(undefined);
+    }
+  }
+
+  const contextValue = {
+    openItemId,
+    toggleItem,
+  };
   return (
     <section className="w-11/12 m-auto text-center mt-24 lg:w-3/5">
       <h2 className="w-4/5 m-auto text-center my-4 text-xl font-semibold text-darkblue lg:text-3xl">
@@ -13,9 +39,11 @@ export default function FAQ() {
       </p>
       <article>
         <div>
-          {FAQ_LIST.map((item) => (
-            <Accordion key={item.id} {...item} />
-          ))}
+          <FaqContext.Provider value={contextValue}>
+            {FAQ_LIST.map((item) => (
+              <FAQ.Item key={item.id} {...item} id={item.id} />
+            ))}
+          </FaqContext.Provider>
         </div>
       </article>
 
@@ -25,3 +53,5 @@ export default function FAQ() {
     </section>
   );
 }
+
+FAQ.Item = AccordionItem;
