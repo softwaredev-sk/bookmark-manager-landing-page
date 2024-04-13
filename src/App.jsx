@@ -18,7 +18,7 @@ function App() {
   }
   return (
     <>
-      <Header onSelect={handleHeaderOverlay} showOverlay />
+      <Header onSelect={handleHeaderOverlay} overlay={showOverlay} />
       <AnimatePresence>
         {showOverlay && <HeaderOverlay onSelect={handleHeaderOverlay} />}
       </AnimatePresence>

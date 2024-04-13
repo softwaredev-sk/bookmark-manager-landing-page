@@ -2,15 +2,16 @@ import logoImg from '../assets/images/logo-bookmark.svg';
 import openIcon from '../assets/images/icon-hamburger.svg';
 import closeIcon from '../assets/images/icon-close.svg';
 
-export default function Header({ onSelect, showOverlay }) {
+export default function Header({ onSelect, overlay }) {
+  console.log(overlay);
   return (
     <header className="flex justify-between m-5 lg:w-11/12 lg:max-w-[1440px] lg:mx-auto">
       {/* <div> */}
       <img src={logoImg} alt="bookmark-logo" className="h-fit" />
       <img
-        src={showOverlay ? openIcon : closeIcon}
+        src={!overlay ? openIcon : closeIcon}
         alt="hamburger-icon"
-        className="w-5 h-4 my-auto  md:hidden"
+        className={`w-5 h-4 my-auto md:hidden`}
         onClick={onSelect}
       />
       {/* </div> */}
