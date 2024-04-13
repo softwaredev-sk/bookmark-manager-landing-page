@@ -5,7 +5,7 @@ import logoTwitter from '../assets/images/icon-twitter.svg';
 export default function Footer() {
   return (
     <div className="bg-darkblue">
-      <footer className="p-8 w-full m-auto text-center lg:flex lg:justify-between lg:max-w-[1600px]">
+      <footer className="p-8 w-11/12 my-auto mx-auto text-center lg:flex lg:justify-between lg:max-w-[1600px]">
         <div className="lg:flex lg:gap-12">
           <img
             src={logoImgWhite}

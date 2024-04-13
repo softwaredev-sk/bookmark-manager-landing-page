@@ -1,36 +1,11 @@
 import { useState } from 'react';
-import tabOne from '../assets/images/illustration-features-tab-1.svg';
-import tabTwo from '../assets/images/illustration-features-tab-2.svg';
-import tabThree from '../assets/images/illustration-features-tab-3.svg';
-
-const DATA_STORE = [
-  {
-    id: 1,
-    title: 'Bookmark in one click',
-    desc: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.',
-    button: 'Simple Bookmarking',
-    image: tabOne,
-  },
-  {
-    id: 2,
-    title: 'Intelligent search',
-    desc: 'Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.',
-    button: 'Speedy Searching',
-    image: tabTwo,
-  },
-  {
-    id: 3,
-    title: 'Share your bookmarks',
-    desc: 'Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.',
-    button: 'Easy Sharing',
-    image: tabThree,
-  },
-];
+import { DATA_STORE } from '../utils/utils';
+import Shadow from '../UI/Shadow';
 
 function Features() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="relative my-24 md:w-4/5 m-auto">
+    <section className="relative my-24">
       <h2 className="w-4/5 m-auto text-center my-4 text-xl font-semibold text-darkblue md:w-3/5 lg:text-3xl">
         Features
       </h2>
@@ -66,7 +41,8 @@ function Features() {
           alt="feature-1"
           className="w-4/5 m-auto md:w-fit "
         />
-        <div className="w-[450px] h-[200px] bg-softblue absolute -translate-x-36 -translate-y-40 overflow-x-hidden -z-10 rounded-br-[100px] md:rounded-tr-[200px] md:translate-y-20 md:rounded-br-[150px] md:h-[350px] md:w-[700px] md:-translate-x-80"></div>
+        {/* <div className="w-[450px] h-[200px] bg-softblue absolute -translate-x-36 -translate-y-40 overflow-x-hidden -z-10 rounded-br-[100px] md:rounded-tr-[200px] md:translate-y-20 md:rounded-br-[150px] md:h-[350px] md:w-[700px] md:-translate-x-80"></div> */}
+        <Shadow side={'left'} />
         <div className="mt-16 w-4/5 m-auto text-center md:text-left md:ml-8 md:w-2/5 ">
           <h2 className="text-darkblue text-2xl font-semibold lg:text-3xl">
             {DATA_STORE[activeIndex].title}
