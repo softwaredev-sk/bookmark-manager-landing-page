@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/softwaredev-sk/bookmark-manager-landing-page)
-- Live Site URL: [Add live site URL here](https://bookmark-manager-landing-page.vercel.app)
+- Solution URL: [See Repository](https://github.com/softwaredev-sk/bookmark-manager-landing-page)
+- Live Site URL: [See Live](https://bookmark-manager-landing-page.vercel.app)
 
 ### Built with
 
