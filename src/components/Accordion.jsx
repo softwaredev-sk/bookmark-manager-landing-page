@@ -13,9 +13,13 @@ export default function Accordion({ question, answer }) {
         <h3 className="text-darkblue">{question}</h3>
         <button>
           {!isVisible ? (
-            <img src={iconArrow} />
+            <img src={iconArrow} alt="faq-question-is-closed" />
           ) : (
-            <img src={iconArrowRed} className="rotate-180" />
+            <img
+              src={iconArrowRed}
+              className="rotate-180"
+              alt="faq-question-is-open"
+            />
           )}
         </button>
       </div>
