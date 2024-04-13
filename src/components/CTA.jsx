@@ -3,7 +3,7 @@ import iconError from '../assets/images/icon-error.svg';
 
 export default function CTA() {
   const email = useRef();
-  const [inputError, setInputError] = useState(true);
+  const [inputError, setInputError] = useState(false);
   const wrongInput = 'bg-softred rounded border-2 border-softred';
   function handleForm(e) {
     e.preventDefault();
