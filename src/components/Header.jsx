@@ -5,7 +5,7 @@ import closeIcon from '../assets/images/icon-close.svg';
 export default function Header({ onSelect, overlay }) {
   console.log(overlay);
   return (
-    <header className="flex justify-between m-5 lg:w-11/12 lg:max-w-[1440px] lg:mx-auto">
+    <header className="flex justify-between m-5">
       <img src={logoImg} alt="bookmark-logo" className="h-fit" />
       <img
         src={!overlay ? openIcon : closeIcon}

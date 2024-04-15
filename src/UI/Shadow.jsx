@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-function Shadow({ side }) {
+function Shadow({ side, ind }) {
   const right = `absolute -z-10 rounded-l-full right-0 bg-softblue w-[18rem] h-[12rem] translate-x-8 -translate-y-48
   sm:w-[30rem] sm:h-[18rem] sm:translate-x-16 sm:-translate-y-72
   md:w-[36rem] md:h-[20rem] md:translate-x-16 md:-translate-y-80
@@ -8,9 +8,14 @@ function Shadow({ side }) {
   `;
   const left = `absolute -z-10 rounded-r-full left-0 bg-softblue  w-[450px] h-[190px] -translate-x-36 -translate-y-36 
   sm:w-[540px] sm:h-[300px] sm:-translate-x-8 sm:-translate-y-64
-  md:w-[540px] md:h-[320px] md:-translate-x-8 md:translate-y-28
-  lg:w-[520px] lg:h-[320px] lg:-translate-x-8 lg:translate-y-28
-  2xl:w-[650px] 2xl:h-[350px] 2xl:-translate-x-8 2xl:translate-y-20
+  md:w-[400px] md:h-[250px] md:-translate-x-8 md:translate-y-20
+  lg:w-[500px] lg:h-[260px] lg:-translate-x-8 ${
+    ind ? 'lg:translate-y-28' : 'lg:translate-y-44'
+  }  
+  xl:w-[580px] xl:h-[340px] xl:-translate-x-8 xl:translate-y-28
+  2xl:w-[700px] 2xl:h-[400px] 2xl:-translate-x-8 ${
+    ind ? '2xl:translate-y-24' : '2xl:translate-y-40'
+  }
   `;
   const classes = side === 'right' ? right : left;
   return <div className={classes}></div>;

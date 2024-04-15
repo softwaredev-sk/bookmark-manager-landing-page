@@ -12,17 +12,17 @@ function Hero() {
 
   return (
     <>
-      <section className="w-11/12 relative my-10 lg:flex lg:flex-row-reverse xl:mx-auto">
-        <div className="lg:w-1/2">
+      <section className="my-10 lg:flex lg:flex-row-reverse lg:justify-around xl:mx-auto">
+        <div>
           <img
             src={heroImg}
             id="hero-image"
             alt="hero-image"
             className="w-fit mx-auto"
           />
-          <Shadow side={'right'} />
+          <Shadow side={'right'} ind={null} />
         </div>
-        <div className="text-center lg:text-left lg:w-1/2 xl:max-w-3xl xl:mx-20">
+        <div className="text-center lg:text-left lg:w-1/2 xl:mx-8 2xl:mx-0">
           <div className="my-10">
             <h2 className="w-4/5 mx-auto my-4 text-3xl font-bold text-darkblue lg:text-5xl lg:font-medium xl:text-6xl xl:w-full">
               A Simple Bookmark Manager

@@ -6,7 +6,7 @@ import Button from '../UI/FormButton';
 function Features() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="relative my-24">
+    <section className="my-24">
       <h2 className="w-4/5 m-auto text-center my-4 text-xl font-semibold text-darkblue md:w-3/5 lg:text-3xl">
         Features
       </h2>
@@ -40,10 +40,9 @@ function Features() {
         <img
           src={FEATURES_DATA[activeIndex].image}
           alt="feature-1"
-          className="w-4/5 m-auto md:w-fit "
+          className="w-4/5 m-auto md:w-1/2"
         />
-        {/* <div className="w-[450px] h-[200px] bg-softblue absolute -translate-x-36 -translate-y-40 overflow-x-hidden -z-10 rounded-br-[100px] md:rounded-tr-[200px] md:translate-y-20 md:rounded-br-[150px] md:h-[350px] md:w-[700px] md:-translate-x-80"></div> */}
-        <Shadow side={'left'} />
+        <Shadow side={'left'} ind={activeIndex === 0} />
         <div className="mt-16 w-4/5 m-auto text-center md:text-left md:ml-8 md:w-2/5 ">
           <h2 className="text-darkblue text-2xl font-semibold lg:text-3xl">
             {FEATURES_DATA[activeIndex].title}

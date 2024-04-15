@@ -3,7 +3,7 @@ import { BROWSERS } from '../utils/utils';
 
 export default function Download() {
   return (
-    <section className="w-4/5 m-auto text-center">
+    <section className="w-4/5 mx-auto my-40 text-center">
       <h2 className="w-4/5 m-auto text-center my-4 text-xl font-semibold text-darkblue lg:text-3xl">
         Download the extension
       </h2>
