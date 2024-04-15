@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FEATURES_DATA } from '../utils/utils';
+import { FEATURES_DATA } from '../utils/data';
 import Shadow from '../UI/Shadow';
 import Button from '../UI/FormButton';
 

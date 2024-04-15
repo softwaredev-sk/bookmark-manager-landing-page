@@ -1,5 +1,5 @@
 import AccordionItem from './AccordionItem';
-import { FAQ_LIST } from '../utils/utils';
+import { FAQ_LIST } from '../utils/data';
 import { createContext, useContext, useState } from 'react';
 import Button from '../UI/FormButton';
 

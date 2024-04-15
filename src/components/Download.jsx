@@ -1,5 +1,5 @@
 import DownloadCard from './DownloadCard';
-import { BROWSERS } from '../utils/utils';
+import { BROWSERS } from '../utils/data';
 
 export default function Download() {
   return (

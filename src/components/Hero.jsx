@@ -2,7 +2,7 @@ import { useState } from 'react';
 import heroImg from '../assets/images/illustration-hero.svg';
 import Button from '../UI/CTAButton';
 import Shadow from '../UI/Shadow';
-import { BROWSERS } from '../utils/utils';
+import { BROWSERS } from '../utils/data';
 
 function Hero() {
   const [active, setActive] = useState('chrome');
